@@ -241,7 +241,14 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_tresActionPerformed
 
     private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
-   
+        int A =Integer.parseInt(txtuno.getText());
+        int B = Integer.parseInt(txtdos.getText());
+        int X = Integer.parseInt(txttres.getText());
+        int resultado;
+        
+        resultado = B * X / A;
+        
+        answer.setText(String.valueOf(resultado));
     }//GEN-LAST:event_cuatroActionPerformed
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
