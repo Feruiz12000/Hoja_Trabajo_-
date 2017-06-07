@@ -225,7 +225,19 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_dosActionPerformed
 
     private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
-    
+        String Nombre= txtuno.getText();
+        String Apellido = txtdos.getText();
+        String Cadena_invertida = "";
+        
+        for(int i = Nombre.length()-1;i>=0;i--){
+            Cadena_invertida += Nombre.charAt(i);
+        }
+        Cadena_invertida += " ";
+        for(int j = Apellido.length()-1; j>=0 ; j--){
+            Cadena_invertida+= Apellido.charAt(j);
+        }
+        
+        answer.setText(Cadena_invertida);
     }//GEN-LAST:event_tresActionPerformed
 
     private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
