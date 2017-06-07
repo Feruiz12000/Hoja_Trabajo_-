@@ -167,7 +167,61 @@ public class Ventana extends javax.swing.JFrame {
     }//GEN-LAST:event_unoActionPerformed
 
     private void dosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosActionPerformed
+        		int estado = 1;
+        boolean bandera = true;
+        String resultado = "NO CUMPLE";
         
+        String cadena;
+        cadena = txtuno.getText().toUpperCase();
+        
+        char[] caracter = cadena.toCharArray();
+        
+        while(bandera == true){
+            bandera = false;
+            switch(estado){
+                case 1:
+                   for(int i = 0; i<caracter.length;i++){
+                       if(caracter[i] == 'A' || caracter[i] == 'Á'){
+                           estado = 2;
+                           bandera = true;
+                       }
+                   }
+                   break;
+                case 2:
+                    for(int i = 0; i<caracter.length;i++){
+                       if(caracter[i] == 'E' || caracter[i] == 'É'){
+                           estado = 3;
+                           bandera = true;
+                       }
+                   }
+                    break;
+                case 3:
+                    for(int i = 0; i<caracter.length;i++){
+                       if(caracter[i] == 'I' || caracter[i] == 'Í'){
+                           estado = 4;
+                           bandera = true;
+                       }
+                   }
+                    break;
+                case 4:
+                    for(int i = 0; i<caracter.length;i++){
+                       if(caracter[i] == 'O' || caracter[i] == 'Ó'){
+                           estado = 5;
+                           bandera = true;
+                       }
+                   }
+                    break;
+                case 5:
+                    for(int i = 0; i<caracter.length;i++){
+                       if(caracter[i] == 'U' || caracter[i] == 'Ú'){
+                           resultado = "CUMPLE";
+                       }
+                   }
+                    break;
+               }
+           }
+        
+        answer.setText(resultado);
     }//GEN-LAST:event_dosActionPerformed
 
     private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
